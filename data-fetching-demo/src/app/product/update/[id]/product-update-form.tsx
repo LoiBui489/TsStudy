@@ -7,8 +7,8 @@ import { useActionState } from "react";
 
 export default function UpdateProductForm( { product }: { product: ProductRes } ) {
     const initialState: FormState = { error: {} };
-    const updateProductjh = update.bind(null, Number(product.id));
-    const [state, formAction, isPending] = useActionState(updateProductjh, initialState);
+    const updateProductAction = update.bind(null, Number(product.id));
+    const [state, formAction, isPending] = useActionState(updateProductAction, initialState);
 
     return (
         <div className="container h-screen content-center">
